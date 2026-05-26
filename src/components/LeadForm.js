@@ -12,8 +12,6 @@ export default function LeadForm() {
     company: "",
     email: "",
     phone: "",
-    revenue: "",
-    taxRegime: "",
     taxRecovery: "",
   });
   const [status, setStatus] = useState("idle"); // idle | loading | success
@@ -52,8 +50,6 @@ export default function LeadForm() {
           interest: "Diagnóstico Tributário Gratuito",
           pinned_note: true,
           custom_fields: {
-            _faturamento_mensal: form.revenue,
-            _regime_tributario: form.taxRegime,
             _recuperacao_tributaria: form.taxRecovery,
           },
         }),
@@ -71,8 +67,6 @@ export default function LeadForm() {
       company: "",
       email: "",
       phone: "",
-      revenue: "",
-      taxRegime: "",
       taxRecovery: "",
     });
   }
@@ -88,12 +82,9 @@ export default function LeadForm() {
       <div className="relative bg-white/[0.04] border border-cyan/15 rounded-[20px] p-11 max-md:p-8 backdrop-blur-[30px] overflow-hidden">
         <div className="form-accent-line" />
 
-        <h2 className="font-[var(--font-jakarta)] text-[1.35rem] font-bold tracking-tight mb-1.5">
-          Solicite seu diagnóstico
+        <h2 className="font-[var(--font-jakarta)] text-[1.35rem] font-bold tracking-tight mb-8">
+        Preencha os dados e descubra quanto sua empresa pode economizar.
         </h2>
-        <p className="text-[0.88rem] text-white/50 mb-8">
-          Preencha os dados e descubra quanto sua empresa pode economizar.
-        </p>
 
         {status === "success" ? (
           <div className="text-center py-10">
@@ -176,36 +167,6 @@ export default function LeadForm() {
 
             <div>
               <label className="block text-[0.78rem] font-semibold uppercase tracking-[1px] text-white/55 mb-2">
-                Faturamento mensal
-              </label>
-              <input
-                type="text"
-                name="revenue"
-                value={form.revenue}
-                onChange={handleChange}
-                placeholder="Ex.: R$ 500 mil"
-                required
-                className={inputClasses}
-              />
-            </div>
-
-            <div>
-              <label className="block text-[0.78rem] font-semibold uppercase tracking-[1px] text-white/55 mb-2">
-              QUAL REGIME SEU ESCRITÓRIO ATENDE?
-              </label>
-              <input
-                type="text"
-                name="taxRegime"
-                value={form.taxRegime}
-                onChange={handleChange}
-                placeholder="Ex.: Simples Nacional"
-                required
-                className={inputClasses}
-              />
-            </div>
-
-            <div>
-              <label className="block text-[0.78rem] font-semibold uppercase tracking-[1px] text-white/55 mb-2">
                 Você faz recuperação tributária?
               </label>
               <div className="flex gap-3">
@@ -245,7 +206,7 @@ export default function LeadForm() {
             >
               {status === "loading"
                 ? "Enviando..."
-                : "Quero meu diagnóstico gratuito →"}
+                : "Quero economizar →"}
             </button>
           </form>
         )}

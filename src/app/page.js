@@ -2,15 +2,15 @@ import Navbar from "@/components/Navbar";
 import HeroContent from "@/components/HeroContent";
 import LeadForm from "@/components/LeadForm";
 import BottomBar from "@/components/BottomBar";
+import BackgroundImage from "@/components/BackgroundImage";
 import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
     <>
-      {/* Background effects */}
+      {/* Background */}
+      <BackgroundImage />
       <div className="noise-overlay" />
-      <div className="bg-glow-top" />
-      <div className="bg-glow-bottom" />
 
       <Navbar />
 
