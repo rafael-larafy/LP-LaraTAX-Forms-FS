@@ -79,12 +79,11 @@ export default function HeroContent() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         className="font-[var(--font-jakarta)] text-[clamp(2.2rem,4vw,3.2rem)] font-extrabold leading-[1.1] tracking-tight mb-6"
       >
-        Pare de perder tempo{" "}
+        Chegue preparado em cada reunião.{" "}
         <span className="text-cyan relative">
-          manipulando dados tributários
+        Diagnóstico tributário completo em minutos.
           <span className="absolute bottom-0.5 left-0 w-full h-[3px] bg-cyan/30 rounded-sm" />
         </span>
-        .
       </motion.h1>
 
       <motion.div

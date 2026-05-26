@@ -83,7 +83,7 @@ export default function LeadForm() {
         <div className="form-accent-line" />
 
         <h2 className="font-[var(--font-jakarta)] text-[1.35rem] font-bold tracking-tight mb-8">
-        Preencha os dados e descubra quanto sua empresa pode economizar.
+        Preencha os dados e descubra como escalar seu escritório.
         </h2>
 
         {status === "success" ? (
@@ -206,7 +206,7 @@ export default function LeadForm() {
             >
               {status === "loading"
                 ? "Enviando..."
-                : "Quero economizar →"}
+                : "Quero escalar →"}
             </button>
           </form>
         )}
