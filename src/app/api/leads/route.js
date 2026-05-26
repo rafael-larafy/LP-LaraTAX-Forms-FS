@@ -1,4 +1,6 @@
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
+
+export const dynamic = "force-dynamic";
 
 export async function POST(request) {
   const body = await request.json();
@@ -7,7 +9,7 @@ export async function POST(request) {
 
   // Salva no SUPABASE , mas não envia pro Leads2b (Eu acho)
   if (fazRecuperacao === "Não") {
-    const { error } = await supabaseAdmin.from("leads_recusados").insert({
+    const { error } = await getSupabaseAdmin().from("leads_recusados").insert({
       nome: body.name,
       empresa:body.company,
       email: body.email,

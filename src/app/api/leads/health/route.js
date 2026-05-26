@@ -1,15 +1,17 @@
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
-export async function GET () {
-    const {count, error} = await supabaseAdmin
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  const { count, error } = await getSupabaseAdmin()
     .from("leads_recusados")
-    .select("*", {count:"exact", head:true });
+    .select("*", { count: "exact", head: true });
 
-    if (error) {
-        return Response.json (
-            {ok:false,error: error.message},
-            {status: 500}
-        );
-    }
-    return Response.json({ok:true,total:count});
+  if (error) {
+    return Response.json(
+      { ok: false, error: error.message },
+      { status: 500 }
+    );
+  }
+  return Response.json({ ok: true, total: count });
 }
