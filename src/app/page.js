@@ -3,6 +3,7 @@ import HeroContent from "@/components/HeroContent";
 import LeadForm from "@/components/LeadForm";
 import BottomBar from "@/components/BottomBar";
 import BackgroundImage from "@/components/BackgroundImage";
+import FounderSection from "@/components/FounderSection";
 import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
         <HeroContent />
         <LeadForm />
       </section>
+
+      {/* Founder Section */}
+      <FounderSection />
 
       {/* Bottom Trust Bar */}
       <BottomBar />

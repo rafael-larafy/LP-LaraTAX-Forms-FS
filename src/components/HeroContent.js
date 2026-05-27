@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 const trustBadges = [
   { value: 200, prefix: "+R$", suffix: "M", label: "Recuperados", delay: 0 },
   { value: 450, prefix: "", suffix: "+", label: "Empresas atendidas", delay: 150 },
-  { text: "Zero", label: "Risco p/ você" },
 ];
 
 const deliverables = [
@@ -66,7 +65,7 @@ export default function HeroContent() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="inline-flex items-center gap-2 px-[18px] py-2 bg-cyan/10 border border-cyan/25 rounded-full text-[0.78rem] font-semibold text-cyan uppercase tracking-[1.5px] mb-7"
+        className="inline-flex items-center gap-2 px-[18px] py-2 bg-cyan/10 border border-cyan/25 rounded-full text-[0.78rem] font-semibold text-cyan uppercase tracking-[1.5px] mb-4"
       >
         <span className="w-1.5 h-1.5 bg-cyan rounded-full animate-pulse-dot" />
         O que é o LaraTAX?
@@ -79,11 +78,15 @@ export default function HeroContent() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         className="font-[var(--font-jakarta)] text-[clamp(2.2rem,4vw,3.2rem)] font-extrabold leading-[1.1] tracking-tight mb-6"
       >
-        Chegue preparado em cada reunião.{" "}
+        Como identificar {" "}
         <span className="text-cyan relative">
-        Diagnóstico tributário completo em minutos.
+        oportunidades {""} 
           <span className="absolute bottom-0.5 left-0 w-full h-[3px] bg-cyan/30 rounded-sm" />
         </span>
+         tributárias em{" "}
+         <span className="text-cyan relative">
+         30 minutos.
+         </span>
       </motion.h1>
 
       <motion.div

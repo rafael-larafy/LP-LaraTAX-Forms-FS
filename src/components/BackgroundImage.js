@@ -10,8 +10,8 @@ export default function BackgroundImage() {
     mass: 0.6,
   });
 
-  const y = useTransform(smoothScroll, [0, 1500], ["0%", "30%"]);
-  const scale = useTransform(smoothScroll, [0, 1500], [1, 1.15]);
+  const y = useTransform(smoothScroll, [0, 1500], ["0%", "12%"]);
+  const scale = useTransform(smoothScroll, [0, 1500], [1, 1.08]);
 
   return (
     <motion.div
