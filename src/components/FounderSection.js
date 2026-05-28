@@ -15,10 +15,10 @@ export default function FounderSection() {
           className="flex-1 max-w-[480px]"
         >
           <Image
-            src="/Frame 4-2.png"
+            src="/Frame 4-3.png"
             alt="Waldir de Lara, criador do LaraTAX"
-            width={1239}
-            height={1218}
+            width={1452}
+            height={1266}
             className="h-auto w-full object-contain"
             priority={false}
           />
